@@ -398,7 +398,7 @@ func countNL(b []byte) int {
 
 func (g *Grep) Reader(r io.Reader, name string) {
 	if g.buf == nil {
-		g.buf = make([]byte, 1<<20)
+		g.buf = make([]byte, 1<<29)
 	}
 	var (
 		buf        = g.buf[:0]
